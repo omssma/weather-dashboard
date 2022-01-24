@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <header class ='bg-primary text-white text-center' >
+        <h1 class = " color-block mb-3 mx-auto rounded-circle z-depth-1">Weather Dashboard</h1>
+    </header>
+    <!--create overall container  -->
+    <div class='container'>
+        <!-- create one row with 2 colums -->
+        <div class='row justify-content-md-center'>
+            <!-- search container -->
+            <div class='col'>
+                <!-- search for a city form -->
+                <div class="card form-group">
+                    <h3 class="card-header text-uppercase">Search For A City</h3>
+                    <form id="user-form" class="card-body">
+                      <label class="form-label" for="cityname">City Name</label>
+                      <input name="cityname" id="cityname" type="text" autofocus="true" class="form-input form-control" />
+                      <button type="submit" class="btn btn-primary btn-lg btn-block" >Get Weather</button>
+                    </form>
+                  </div>
+                  <div id ='searchHistory' class = ''>Search History</div>
+            </div>
+            <div class='col'>
+                <!-- create 2 rows for current weather info and for forecast cards -->
+                <!-- 1st row for current weather card -->
+                <div class='row list-item flex-row justify-space-between align-center border border-secondary' id='weatherCurrent'></div>
+                <!-- 2nd row for forecast cards -->
+                <div class="col-sm-6">
+                    <h2 class="subtitle">5 Day Forecast <span id="forecast"></span></h2>
+                    <div id="forecast-container" class="list-group card-title"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- jQuery and bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
