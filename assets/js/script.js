@@ -15,10 +15,9 @@ var getUserWeather = async function (city) {
             var coordLat = data.coord.lat;
             var coordLon = data.coord.lon;
             console.log(coordLat, coordLon);
-
             //return fetch request to the one call api with the coordinates 
             var forecast = await fetch(
-                'https://api.openweathermap.org/data/2.5/onecall?lat=' + coordLat + '&lon=' + coordLon + '&units=imperial&exclude=current, minutely,hourly, alerts&appid=0709fe582a3226805c5caaebd2b415a5'
+                'https://api.openweathermap.org/data/2.5/onecall?lat=' + coordLat + '&lon=' + coordLon + '&units=imperial&exclude=current, minutely,hourly, alerts&appid=df40b5608b8598db044ae503ae0da845'
             );
             var forecastJSON = await forecast.json();
             console.dir(forecastJSON.daily[0].uvi)
